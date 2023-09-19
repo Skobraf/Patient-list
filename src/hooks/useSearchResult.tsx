@@ -15,6 +15,7 @@ export const useSearchPatientResult = (query: ISearchQuery) => {
             searchInputFilter(query.searchInput)(patient) &&
             genderFilter(query.gender)(patient) &&
             ageFilter[query.ageRange](patient) &&
+            // eslint-disable-next-line eqeqeq
             patient.patient_id != query.deletedPatient
         );
     });
